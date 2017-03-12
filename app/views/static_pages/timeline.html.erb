@@ -1,0 +1,300 @@
+<main class="container">
+	<%= render "cover" %>
+	<section class="row timeline-container">
+		<div class="col-md-5 left-columns-timeline">
+
+			<!-- ############## about wrapper ###############-->
+
+			<div class="row column-label-line">
+				<div class="col-md-12 column-label">
+					<label>About</label>
+				</div> <!-- about-label -->
+			</div> <!-- about-line -->
+			<div class="row column-area about-content">
+				<h4>Born on: </h4> July 31st, 1980<br />
+				<h4>Went to school at: </h4> Hogwarts<br />
+				<h4>Hometown: </h4> Godrick's Hollow, England<br />
+				<h4>Currently Lives: </h4> Godrick's Hollow<br />
+			</div> <!-- about-area -->
+
+			<!-- ############## photos wrapper ###############-->
+
+			<div class="row column-label-line">
+				<div class="col-md-12 column-label">
+					<label>Photos (123)</label>
+				</div> <!-- photos-label -->
+			</div> <!-- photos-line -->
+			<div class="row column-area column-area-tall photos-section-wrapper">
+				<div class="col-md-12">
+					<% 3.times do %>
+						<div class="row">
+						<% 3.times do %>
+							<div class="col-md-4">
+								<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							</div>
+						<% end %>
+						</div>
+					<% end %>
+				</div>
+				<a href="#"><h5>See More Photos</h5></a>
+			</div> <!-- photos-area -->
+
+			<!-- ############## friends wrapper ###############-->
+
+			<div class="row column-label-line">
+				<div class="col-md-12 column-label">
+					<label>Friends (542)</label>
+				</div> <!-- friends-label -->
+			</div> <!-- friends-line -->
+			<div class="row column-area column-area-tall photos-section-wrapper">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>Ron Weasley</h5></a>
+						</div>
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>Ginny Weasley</h5></a>
+						</div>
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>Hermione Granger</h5></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>paragraph text</h5></a>
+						</div>
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>paragraph text</h5></a>
+						</div>
+						<div class="col-md-4">
+							<%= image_tag "icon_photo_small.png", class:"img-thumbnail", alt:"Friend Picture" %>
+							<a href="#"><h5>paragraph text</h5></a>
+						</div>
+					</div>
+				</div>
+				<a href="#"><h5>See More Friends</h5></a>
+			</div> <!-- friends-area -->
+		</div> <!-- left-columns -->
+		<div class="col-md-7 right-columns-timeline">
+			
+
+			<!-- ############## post write wrapper ###############-->
+
+			<div class="row column-label-line">
+				<div class="col-md-12 column-label">
+					<label>Post</label>
+				</div> <!-- post-label -->
+			</div> <!-- post-line -->
+			<div class="row column-area post-content-wrapper">
+				<textarea type="text" class="form-control" id="postcontent">Tell the world something...</textarea>
+			</div> <!-- post-area -->
+
+			<div class="row column-area column-area-footer">
+				<div class="col-md-2 col-md-offset-10 post-btn-wrapper">
+					<button type="button" class="btn btn-primary btn-post">Post</button>
+				</div>
+			</div> <!-- post-area-footer -->
+
+			<!-- ############## single post wrapper ###############-->
+
+			<div class="row column-area column-area-with-top-border">
+				<div class="row posted-post-wrapper">
+					<div class="col-md-12 small-pic">
+						<%= image_tag "harry_potter_small.png", class: "img-thumbnail small-profile-pic", alt:"Harry profile pic" %>
+						<div class="author-info-wrapper">
+							<a href="#"><h5>Harry Potter</h5></a>
+							<time datetime="2014-06-1"><h5 class="posted-time">Posted on Thursday 6/1/2014</h5></time>
+						</div>
+					</div>
+				</div> <!-- posted-post-wrapper-->
+				<div class="row posted-post-content-wrapper">
+					<div class="col-md-12 a-post-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div> <!-- posted-post-wrapper-->
+			</div> <!-- post-area -->
+
+			<div class="row column-area column-area-footer">
+				<div class="row">
+					<div class="col-md-1 like-button">
+						<a href="#">Like</a>
+					</div>
+					<div class="col-md-1 like-button">
+						<a href="#">Comment</a>
+					</div>
+					<div class="col-md-1 col-md-offset-8 like-button">
+						<a href="#">Delete</a>
+					</div>
+				</div>
+			</div> <!-- post-area-footer -->
+
+			<!-- ############## single post wrapper ###############-->
+
+
+			<div class="row column-area column-area-with-top-border">
+				<div class="row posted-post-wrapper">
+					<div class="col-md-12 small-pic">
+						<%= image_tag "harry_potter_small.png", class: "img-thumbnail small-profile-pic", alt:"Harry profile pic" %>
+						<div class="author-info-wrapper">
+							<a href="#"><h5>Harry Potter</h5></a>
+							<time datetime="2014-05-21"><h5 class="posted-time">Posted on Thursday 5/21/2014</h5></time>
+						</div>
+					</div>
+				</div> <!-- posted-post-wrapper-->
+				<div class="row posted-post-content-wrapper">
+					<div class="col-md-12 a-post-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div> <!-- posted-post-wrapper-->
+			</div> <!-- post-area -->
+
+			<div class="row column-area column-area-footer">
+				<div class="row">
+					<div class="col-md-1 like-button">
+						<a href="#">Like</a>
+					</div>
+					<div class="col-md-1 like-button">
+						<a href="#">Comment</a>
+					</div>
+					<div class="col-md-1 col-md-offset-8 like-button">
+						<a href="#">Delete</a>
+					</div>
+				</div>
+				<div class="row likes-stat">
+					<div class="col-md-5 like-button">
+						<a href="#">Hermione Granger</a> likes this
+					</div>
+				</div>
+			</div> <!-- post-area-footer -->
+
+			<!-- ############## single edit wrapper ###############-->
+
+			<div class="row column-area column-area-with-top-border">
+				<div class="row posted-post-wrapper">
+					<div class="col-md-12 small-pic">
+						<%= image_tag "harry_potter_small.png", class: "img-thumbnail small-profile-pic", alt:"Harry profile pic" %>
+						<div class="author-info-wrapper">
+							<a href="#"><h5>Harry Potter</h5></a>
+							<time datetime="2014-05-21"><h5 class="posted-time-edit">Posted on Thursday 5/21/2014</h5></time>
+						</div>
+					</div>
+				</div> <!-- posted-post-wrapper-->
+				<div class="row posted-post-content-wrapper">
+					<div class="col-md-12 a-post-content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				</div> <!-- posted-post-wrapper-->
+			</div> <!-- post-area -->
+
+			<div class="row column-area column-area-footer-no-margin">
+				<div class="row">
+					<div class="col-md-1 like-button">
+						<a href="#">Unlike</a>
+					</div>
+					<div class="col-md-1 col-md-offset-9 like-button">
+						<a href="#">Delete</a>
+					</div>
+				</div>
+				<div class="row likes-stat">
+					<div class="col-md-8 like-button">
+						<span class="like-stat-text">You and <a href="#">Hermione Granger</a> and 3 others like this</span>
+					</div>
+				</div>
+			</div> <!-- post-area-footer -->
+
+			<div class="row column-area comments-section">
+				<div class="row a-comment-line">
+					<div class="col-md-2 commenter-photo">
+						<%= image_tag "user_silhouette_generic.gif", class: "img-thumbnail small-profile-pic", alt:"Harry profile pic" %>
+					</div>
+					<div class="col-md-10 comment-info-wrapper">
+						<div class="row commenter-name-time">
+							<div class="col-md-12">
+								<span class="comment-author-time"><a href="#">Ron weasley</a> Said on<time datetime="2014-05-21"> Thursday 5/21/2014</time>:</span>
+							</div>
+						</div>
+						<div class="row commenter-comment">
+							<div class="col-md-12">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in</p>
+							</div>
+						</div>
+						<div class="row commenter-buttons">
+							<div class="col-md-10">
+								<a href="#">Like</a><span> 3 other people like this</span>
+							</div>
+							<div class="col-md-2">
+								<a href="#">Delete</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row a-comment-line">
+					<div class="col-md-2 commenter-photo">
+						<%= image_tag "harry_potter_small.png", class: "img-thumbnail small-profile-pic", alt:"Harry profile pic" %>
+					</div>
+					<div class="col-md-10 comment-info-wrapper">
+						<div class="row commenter-name-time">
+							<div class="col-md-12">
+								<span class="comment-author-time"><a href="#">Harry Potter</a> Said on<time datetime="2014-05-22"> Friday 5/22/2014</time>:</span>
+							</div>
+						</div>
+						<div class="row commenter-comment">
+							<div class="col-md-12">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in</p>
+							</div>
+						</div>
+						<div class="row commenter-buttons">
+							<div class="col-md-10">
+								<a href="#">Like</a><span> 3 other people like this</span>
+							</div>
+							<div class="col-md-2">
+								<a href="#">Delete</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row comment-text-area">
+					<div class="col-md-12">
+						<textarea type="text" class="form-control" id="postcontent">Write a comment...</textarea>
+					</div>
+				</div>
+				<div class="row comment-buttons">
+					<div class="col-md-2 col-md-offset-1">
+						<a href="#">Cancel</a>
+					</div>
+					<div class="col-md-3 col-md-offset-6">
+						<button type="button" class="btn btn-primary btn-comment">Comment</button>
+					</div>
+				</div>
+
+			</div> <!-- post-area-footer -->
+
+		</div> <!-- right-columns -->
+	</section> <!-- timeline-container -->
+</main>

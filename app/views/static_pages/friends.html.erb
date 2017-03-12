@@ -1,0 +1,21 @@
+<main class="container">
+	<%= render "cover" %>
+	<section class="row profile-container">
+		<div class="col-md-12">
+			<div class="row about-line">
+				<div class="col-md-2 col-md-offset-5 about-label">
+					<label>Friends</label>
+				</div>
+				<div class="col-md-2 col-md-offset-3 edit-button">
+				</div>
+			</div>
+			<div class="row friends-wrapper">
+				<div class="col-md-12">
+					<% 3.times do %>
+						<%= render "line_friends" %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>

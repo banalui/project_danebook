@@ -1,0 +1,38 @@
+
+<% if @logged_in %>
+	<nav class="navbar navbar-inverse clearfix container-fluid">
+		<div class="navbar-wrapper">
+			<a href="/"><%= image_tag "danish_flag.gif", class:"img-circle", alt:"Danish Flag Logo" %></a>
+			<label class="danebook-label">Danebook</label>
+			<form>
+				<input type="text" class="form-control" id="inputFirstName" placeholder="Search for Users">
+			</form>
+			<label class="name-label">Harry</label>
+		</div>
+	</nav>
+<% else %>
+	<nav class="navbar navbar-inverse clearfix">
+		<div class="navbar-header navbar-left">
+			<h1>Danebook</h1>
+		</div>
+		<div class="navbar-right signin-wrapper">
+			<form action="/timeline">
+				<div class="row form-wrapper">
+					<div class="col-md-5">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email</label>
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-info btn-login">Log In</button>
+				</div>
+			</form>
+		</div>
+	</nav>
+<% end %>

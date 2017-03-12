@@ -1,0 +1,106 @@
+<main class="container">
+	<section class="row cover-container">
+		<div class="profile-picture">
+		</div>
+		<div class="col-md-12">
+			
+		</div>
+	</section>
+	<section class="row buttons-container">
+		<div class="col-md-8 left-columns">
+			<div class="row">
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-2 bordered-column">
+					<%= link_to "Timeline", timeline_path, class: "faked-b" %>
+				</div>
+				<div class="col-md-2 bordered-column" id="clicked-button">
+					<%= link_to "About", about_path, class: "faked-b", id: "clicked-button" %>
+				</div>
+				<div class="col-md-2 bordered-column">
+					<%= link_to "Photos", photos_path, class: "faked-b" %> (123) 
+				</div>
+				<div class="col-md-2 bordered-column">
+					<%= link_to "Friends", friends_path, class: "faked-b" %> (542)
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-4 right-columns">
+			<div class="row">
+				<div class="col-md-12 bordered-column">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="row profile-container">
+		<div class="col-md-12">
+			<div class="row about-line">
+				<div class="col-md-4 col-md-offset-4 about-label">
+					<label>Edit Profile</label>
+				</div>
+				<div class="col-md-4 edit-button">
+				</div>
+			</div>
+			<div class="row info-line" id="info-line-edit">
+				<div class="col-md-5 info-wrapper">
+					<h2>Basic Information</h2>
+					<form>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>Birthday:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" id="college" value="July 31st, 1980">
+							</div>
+						</div>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>College:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" id="college" value="Hogwarts College">
+							</div>
+						</div>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>Hometown:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" id="hometown" value="Godrick's Hollow, England">
+							</div>
+						</div>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>Currently Lives:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" value="Godrick's Hollow, England">
+							</div>
+						</div>
+						<h2>Contact Information</h2>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>Email:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" value="harry_potter@hogwarts.edu">
+							</div>
+						</div>
+						<div class="row basic-info-line">
+							<div class="col-md-6 info-label"><b>Telephone:</b></div>
+							<div class="col-md-6 info-info">
+								<input type="text" class="form-control" value="555-123-4567">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-7 aboutme-wrapper">
+					<h2>Words to Live By</h2>
+					<form>
+						<textarea type="text" class="form-control tallform" id="aboutme">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</textarea>
+						<h2>About Me</h2>
+						<textarea type="text" class="form-control tallform" id="lives">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+						<p></p>
+					</form>
+				</div>
+			</div>
+			<div class="row save-line">
+				<div class="col-md-6 col-md-offset-3 save-button">
+					<button type="button" class="btn btn-primary btn-save btn-lg">Save Changes</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>

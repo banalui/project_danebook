@@ -1,0 +1,48 @@
+<section class="row cover-container">
+	<div class="profile-picture">
+	</div>
+</section>
+<section class="row buttons-container">
+	<div class="col-md-8 left-columns">
+		<div class="row">
+			<div class="col-md-4">
+				
+			</div>
+		<% if @current_page_timeline %>
+			<div class="col-md-2 bordered-column" id="clicked-button">
+		<% else %>
+			<div class="col-md-2 bordered-column">
+		<% end %>
+					<%= link_to "Timeline", timeline_path, class: "faked-b" %>
+			</div>
+		<% if @current_page_about %>
+			<div class="col-md-2 bordered-column" id="clicked-button">
+		<% else %>
+			<div class="col-md-2 bordered-column">
+		<% end %>
+					<%= link_to "About", about_path, class: "faked-b" %>
+			</div>
+		<% if @current_page_photos %>
+			<div class="col-md-2 bordered-column" id="clicked-button">
+		<% else %>
+			<div class="col-md-2 bordered-column">
+		<% end %>
+					<%= link_to "Photos", photos_path, class: "faked-b" %> (123)
+			</div>
+		<% if @current_page_friends %>
+			<div class="col-md-2 bordered-column" id="clicked-button">
+		<% else %>
+			<div class="col-md-2 bordered-column">
+		<% end %>
+					<%= link_to "Friends", friends_path, class: "faked-b" %> (542)
+			</div>
+		</div>	
+	</div>
+	<div class="col-md-4 right-columns">
+		<div class="row">
+			<div class="col-md-12 bordered-column">
+				<a href="about_edit.html">Edit Profile</a>
+			</div>
+		</div>
+	</div>
+</section>
