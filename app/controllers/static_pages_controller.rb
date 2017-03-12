@@ -1,44 +1,30 @@
 class StaticPagesController < ApplicationController
+
+	before_action :default_flag_set
+
 	def home
 		@logged_in = false
-		@current_page_timeline = false
-		@current_page_about = false
-		@current_page_photos = false
 	end
 	def timeline
-		@logged_in = true
-		@current_page_timeline = true
-		@current_page_about = false
-		@current_page_photos = false
-		@current_page_friends = false
+		@current_page = 'timeline'
 	end
 	def friends
-		@logged_in = true
-		@current_page_timeline = false
-		@current_page_about = false
-		@current_page_photos = false
-		@current_page_friends = true
+		@current_page = 'friends'
 	end
 	def about
-		@logged_in = true
-		@current_page_timeline = false
-		@current_page_about = true
-		@current_page_photos = false
-		@current_page_friends = false
+		@current_page = 'about'
 	end
 	def photos
-		@logged_in = true
-		@current_page_timeline = false
-		@current_page_about = false
-		@current_page_photos = true
-		@current_page_friends = false
-
+		@current_page = 'photos'
 	end
 	def about_edit
-		@logged_in = true
-		@current_page_timeline = false
-		@current_page_about = true
-		@current_page_photos = false
-		@current_page_friends = false
+		@current_page = 'about'
 	end
+
+	private
+
+		def default_flag_set
+			@logged_in = true
+			@current_page = 'home'
+		end
 end

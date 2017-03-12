@@ -8,32 +8,16 @@
 			<div class="col-md-4">
 				
 			</div>
-		<% if @current_page_timeline %>
-			<div class="col-md-2 bordered-column" id="clicked-button">
-		<% else %>
-			<div class="col-md-2 bordered-column">
-		<% end %>
+			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'timeline' %> >
 					<%= link_to "Timeline", timeline_path, class: "faked-b" %>
 			</div>
-		<% if @current_page_about %>
-			<div class="col-md-2 bordered-column" id="clicked-button">
-		<% else %>
-			<div class="col-md-2 bordered-column">
-		<% end %>
+			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'about' %> >
 					<%= link_to "About", about_path, class: "faked-b" %>
 			</div>
-		<% if @current_page_photos %>
-			<div class="col-md-2 bordered-column" id="clicked-button">
-		<% else %>
-			<div class="col-md-2 bordered-column">
-		<% end %>
+			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'photos' %> >
 					<%= link_to "Photos", photos_path, class: "faked-b" %> (123)
 			</div>
-		<% if @current_page_friends %>
-			<div class="col-md-2 bordered-column" id="clicked-button">
-		<% else %>
-			<div class="col-md-2 bordered-column">
-		<% end %>
+			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'friends' %> >
 					<%= link_to "Friends", friends_path, class: "faked-b" %> (542)
 			</div>
 		</div>	
