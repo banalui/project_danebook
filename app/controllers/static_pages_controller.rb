@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
 
 	def home
 		@logged_in = false
+		@user = User.new
 	end
 	def timeline
 		@current_page = 'timeline'

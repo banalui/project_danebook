@@ -1,5 +1,5 @@
 
-<% if @logged_in %>
+<% if signed_in_user? %>
 	<nav class="navbar navbar-inverse clearfix container-fluid">
 		<div class="navbar-wrapper">
 			<a href="/"><%= image_tag "danish_flag.gif", class:"img-circle", alt:"Danish Flag Logo" %></a>
@@ -7,7 +7,7 @@
 			<form>
 				<input type="text" class="form-control" id="inputFirstName" placeholder="Search for Users">
 			</form>
-			<label class="name-label">Harry</label>
+			<label class="name-label"><%= current_user.email %></label>
 		</div>
 	</nav>
 <% else %>
