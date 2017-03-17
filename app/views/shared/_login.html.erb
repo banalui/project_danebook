@@ -1,0 +1,23 @@
+<%= form_tag session_path do %>
+	<div class="row form-wrapper">
+		<div class="col-md-4">
+			<div class="form-group">
+					Email
+					<%= text_field_tag :email, nil, class: "form-control", id: "exampleInputEmail1" %>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="form-group">
+					Password
+					<%= text_field_tag :password, nil, class: "form-control", id: "exampleInputPassword1" %>
+				</div>
+			</div>
+			<div class="col-md-4 navbar-login-button">
+				<div class="form-group">
+					<%= submit_tag "Log in", class: "btn btn-info btn-login form-control" %>
+					Remember me?
+    				<%= check_box_tag :remember_me %>
+				</div>
+			</div>
+		</div>
+<% end %>
