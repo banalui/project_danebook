@@ -1,0 +1,53 @@
+<main class="container">
+	<%= render "cover" %>
+	<section class="row profile-container">
+		<div class="col-md-12">
+			<div class="row about-line">
+				<div class="col-md-2 col-md-offset-5 about-label">
+					<label>About</label>
+				</div>
+				<div class="col-md-2 col-md-offset-3 edit-button">
+					<% if current_user.id == @user.id %>
+						<%= link_to "Edit your Profile", edit_user_path(@user), class: "btn btn-primary btn-edit btn-lg" %>
+					<% end %>
+				</div>
+			</div>
+			<div class="row info-line">
+				<div class="col-md-5 info-wrapper">
+					<h2>Basic Information</h2>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>Birthday:</b></div>
+						<div class="col-md-6 info-info"><%= @user.birthday.strftime('%b %d, %Y') %></div>
+					</div>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>College:</b></div>
+						<div class="col-md-6 info-info"><%= @user.college %></div>
+					</div>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>Hometown:</b></div>
+						<div class="col-md-6 info-info"><%= @user.hometown %></div>
+					</div>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>Currently Lives:</b></div>
+						<div class="col-md-6 info-info"><%= @user.currently_lives %></div>
+					</div>
+					<h2>Contact Information</h2>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>Email:</b></div>
+						<div class="col-md-6 info-info"><%= @user.email %></div>
+					</div>
+					<div class="row basic-info-line">
+						<div class="col-md-6 info-label"><b>Telephone:</b></div>
+						<div class="col-md-6 info-info"><%= @user.telephone %></div>
+					</div>
+				</div>
+				<div class="col-md-7 aboutme-wrapper">
+					<h2>Words to Live By</h2>
+					<p><%= @user.words_to_live_by %></p>
+					<h2>About Me</h2>
+					<p><%= @user.about_me %></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>

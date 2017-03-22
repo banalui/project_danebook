@@ -3,10 +3,10 @@
 	<%= form_for @user do |user_fields| %>
 		<div class="row form-signup-wrapper form-group">
 			<div class="col-md-6">
-				<input disabled type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+  				<%= user_fields.text_field :first_name, :placeholder => "First Name", class: "form-control", id: "inputFirstName" %><%= form_field_error_messages(@user, :first_name) %>
 			</div>
 			<div class="col-md-6">
-				<input disabled type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+  				<%= user_fields.text_field :last_name, :placeholder => "Last Name", class: "form-control", id: "inputLastName" %><%= form_field_error_messages(@user, :last_name) %>
 			</div>
 		</div>
 		<div class="row form-signup-wrapper form-group">
@@ -24,16 +24,10 @@
 		  		<%= user_fields.password_field :password_confirmation, :placeholder => "Confirm Your Password", class: "form-control", id: "inputConfirmPassword" %><%= form_field_error_messages(@user, :password_confirmation) %>
 			</div>
 		</div>
-		<div class="row form-signup-wrapper birthday-wrapper">
-			<h3>Birthday</h3>
-			<div class="col-md-3">
-				<input disabled type="text" class="form-control birthday-month" placeholder="Month">
-			</div>
-			<div class="col-md-2">
-				<input disabled type="number" class="form-control birthday-day" placeholder="Day">
-			</div>
-			<div class="col-md-2">
-				<input disabled type="number" class="form-control birthday-year" placeholder="Year">
+		<h3>Birthday</h3>
+		<div class="row form-signup-wrapper form-group">
+			<div class="col-md-12">
+		  		<%= user_fields.date_field :birthday, class: "form-control", id: "inputConfirmPassword" %><%= form_field_error_messages(@user, :birthday) %>
 			</div>
 		</div>
 		<div class="row form-signup-wrapper form-group">

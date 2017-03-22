@@ -1,6 +1,7 @@
 <section class="row cover-container">
 	<div class="profile-picture">
 	</div>
+	<span class="cover-name"><%= "#{@user.first_name.capitalize} #{@user.last_name.capitalize}" %></span>
 </section>
 <section class="row buttons-container">
 	<div class="col-md-8 left-columns">
@@ -9,23 +10,25 @@
 				
 			</div>
 			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'timeline' %> >
-					<%= link_to "Timeline", timeline_path, class: "faked-b" %>
+					<%= link_to "Timeline", "#", class: "faked-b" %>
 			</div>
 			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'about' %> >
-					<%= link_to "About", about_path, class: "faked-b" %>
+					<%= link_to "About", "#", class: "faked-b" %>
 			</div>
 			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'photos' %> >
-					<%= link_to "Photos", photos_path, class: "faked-b" %> (123)
+					<%= link_to "Photos", "#", class: "faked-b" %> (123)
 			</div>
 			<div class="col-md-2 bordered-column"<%= "id=clicked-button" if @current_page == 'friends' %> >
-					<%= link_to "Friends", friends_path, class: "faked-b" %> (542)
+					<%= link_to "Friends", "#", class: "faked-b" %> (542)
 			</div>
 		</div>	
 	</div>
 	<div class="col-md-4 right-columns">
 		<div class="row">
 			<div class="col-md-12 bordered-column">
-				<a href="about_edit.html">Edit Profile</a>
+				<% if current_user.id == @user.id %>
+					<%= link_to "Edit Profile", edit_user_path(@user), class: "faked-b" %>
+				<% end %>
 			</div>
 		</div>
 	</div>

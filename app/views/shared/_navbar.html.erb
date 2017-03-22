@@ -6,10 +6,12 @@
 			<form>
 				<input type="text" class="form-control" id="inputFirstName" placeholder="Search for Users">
 			</form>
-			<label class="name-label"><%= current_user.email %></label>
-			<%= form_tag session_path, method: "delete" do %>
-				<%= submit_tag "Sign Out", class: "btn btn-info signout-button" %>
-			<% end %>
+			<div class="signout-wrapper">
+				<label class="name-label"><%= current_user.email %></label>
+				<%= form_tag session_path, method: "delete" do %>
+					<%= submit_tag "Sign Out", class: "btn btn-info signout-button" %>
+				<% end %>
+			</div>
 		</div>
 	</nav>
 <% else %>

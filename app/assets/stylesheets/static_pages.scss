@@ -24,13 +24,17 @@ b{
 			input{
 				vertical-align: middle;
 				font-size: 20px;
-				width: 550px;
+				width: 600px;
 			}
 		}
 		.signout-button{
 			color: white;
 			width: 100px;
 			font-size: 12px;
+		}
+		.signout-wrapper{
+			float: right;
+			margin-top: 20px;
 		}
 	}
 	h1{
@@ -51,7 +55,7 @@ b{
 		margin-left: 20px;
 	}
 	.name-label{
-		font-size: 17px;
+		font-size: 12px;
 		color: white;
 		display: inline-block;
 		vertical-align: middle;
@@ -143,6 +147,13 @@ main{
 			background: url(asset-path("harry_potter_small.png"));
 			position: relative;
 			z-index: 99999;
+		}
+		.cover-name{
+			position: relative;
+			left: 250px;
+			top: 130px;
+			color: white;
+			font-size: 30px;
 		}
 	}
 	.buttons-container{
@@ -415,62 +426,6 @@ main{
 	}
 }
 
-
-
-	
-	
-	/*.profile-container{
-		margin-top: 20px;
-		.save-line{
-			border-left: 2px solid black;
-			border-right: 2px solid black;
-			border-bottom: 2px solid black;
-			text-align: center;
-			padding-bottom: 300px;
-			button{
-				width: 90%;
-				height: 60px;
-				box-shadow: 6px 3px 14px 1px rgba(0,0,0,0.76);
-				font-size: 25px;
-			}
-		}
-		.info-line{
-			border-left: 2px solid black;
-			border-right: 2px solid black;
-			.basic-info-line{
-				margin-top: 4px;
-			}
-		}
-		.about-line{
-			background-color: #eee;
-			border: 2px solid black;
-			button{
-				box-shadow: 6px 3px 14px 1px rgba(0,0,0,0.76);
-				font-size: 13px;
-			}
-			.about-label{
-				font-size: 33px;
-				text-align: center;
-			}
-			.edit-button{
-				line-height: 56px;
-				text-align: right;
-			}
-		}
-		.info-wrapper{
-			padding : 30px;
-			font-size: 14px;
-			line-height: 30px;
-		}
-		.aboutme-wrapper{
-			padding : 30px;
-		}
-		h2{
-			margin-top: 30px;
-			margin-bottom: 30px;
-		}
-	}*/
-
 /*************************************** About stuff ***************************************/
 
 main{
@@ -517,7 +472,7 @@ main{
 			border-bottom: 2px solid black;
 			text-align: center;
 			padding-bottom: 300px;
-			button{
+			.btn-save{
 				width: 90%;
 				height: 60px;
 				box-shadow: 6px 3px 14px 1px rgba(0,0,0,0.76);
